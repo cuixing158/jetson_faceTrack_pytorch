@@ -37,10 +37,9 @@ This project also adds [Servo tracking face position](./arduinoPro/README.md) fu
 - high fps usb camera or ordinary camera
 - HC-08 bluetooth module,[reference product](https://www.amazon.com/DSD-TECH-SH-HC-08-Transceiver-Compatible/dp/B01N4P7T0H ) or [tao bao](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.591b2e8diCFrEx&id=587180917690&_u=s1nargtrf092 )
 - serial port voice broadcast module,[reference product](https://www.amazon.com/-/zh/dp/B082GFPLNW/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&dchild=1&keywords=serial+port+voice+broadcast+module&qid=1603896362&sr=8-1 )or [tao bao](https://detail.tmall.com/item.htm?id=523931134290&spm=a1z09.2.0.0.591b2e8diCFrEx&_u=s1nargtr4d44 )
-- arduino voice recording module,[reference product](https://www.amazon.com/-/zh/dp/B00V81XEI0/ref=sr_1_2?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&dchild=1&keywords=arduino+voice+recording+module&qid=1603896437&sr=8-2 )or [tao bao](https://detail.tmall.com/item.htm?id=14475144954&spm=a1z09.2.0.0.591b2e8diCFrEx&_u=s1nargtrfa04 )
+- arduino voice recording module,[reference product](https://www.amazon.com/-/zh/dp/B00V81XEI0/ref=sr_1_2?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&dchild=1&keywords=arduino+voice+recording+module&qid=1603896437&sr=8-2 ) or [tao bao](https://detail.tmall.com/item.htm?id=14475144954&spm=a1z09.2.0.0.591b2e8diCFrEx&_u=s1nargtrfa04 )
 - breadboard
 - dupont Line
-![hardware](images/hardwares.jpg )
 
 ## datasets
 
