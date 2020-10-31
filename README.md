@@ -4,11 +4,11 @@
 
 ## Overview
 ----
-Lightweight face detection and recognition library, which can be recognized in real time on jetson/pc devices. The algorithm uses mature MTCNN/Ultra-Light-Fast-Generic-Face-Detector-1MB face detection+InsightFace(Arcface+cosface head Face recognition with +MobileFacenet, resnet backbone), the recognition range is limited to a closed set range, and the training mode can only be performed after collecting the face of each of us.
-This project also adds [Servo tracking face position](./arduinoPro/README.md) function, model quantification (coming soon) + opencv-cuda acceleration + voice recognition broadcast + Bluetooth control.<br>
+Lightweight face detection and recognition library, which can be recognized in real time on jetson/pc devices. The algorithm uses mature MTCNN/Ultra-Light-Fast-Generic-Face-Detector-1MB face detection+InsightFace(Arcface+cosface head Face recognition with +MobileFacenet, resnet backbone), the recognition range is limited to a closed set range.
+This project also adds [Servo tracking face position](./arduinoPro/README.md) function,opencv-cuda acceleration + voice recognition broadcast + Bluetooth control. Among them, ["matlabPro/"](matlabPro/readme.md) is a functional module independent of other python/c++, equivalent to face detection + tracking + HC08 Bluetooth module transmit signal + voice broadcast and other functions.<br>
 
-轻量级的人脸检测和识别库，可在jetson/pc设备上实时识别，算法采用成熟的MTCNN/Ultra-Light-Fast-Generic-Face-Detector-1MB人脸检测+InsightFace(Arcface+cosface head和+MobileFacenet、resnet backbone)进行人脸识别，识别范围限定为闭集范围内，训练模式待收集到我们每个人的人脸后方可进行。
-本项目还增加[舵机跟踪人脸位置](./arduinoPro/README.md)功能，opencv-cuda加速+语音识别播报+蓝牙控制。
+轻量级的人脸检测和识别库，可在jetson/pc设备上实时识别，算法采用成熟的MTCNN/Ultra-Light-Fast-Generic-Face-Detector-1MB人脸检测+InsightFace(Arcface+cosface head和+MobileFacenet、resnet backbone)进行人脸识别，识别范围限定为闭集范围内。
+本项目还增加[舵机跟踪人脸位置](./arduinoPro/README.md)功能，opencv-cuda加速+语音识别播报+蓝牙控制。其中，["matlabPro/"](matlabPro/readme.md)是独立与其他python/c++的功能模块，等价的人脸检测+追踪+HC08蓝牙模块发射信号+语音播报等功能。
 
 ## software main requirements
 
@@ -83,6 +83,10 @@ yourTrainDataFolder/
 提供已知的人脸图像还可以使用prepare_getFaces.py摄像头在线采集，图像会自动存储到上述路径。若有多幅图像，则特征取平均值。
 
 ## How to recognize face (use camera to inference,for pc and jetson) 
+1. Prepare the data set and model: The data set is the above `test datasets` and needs to recognize the known face images, and the model is the appropriate one under the folder `./models/`;<br>
+2. Prepare the face database: `python prepare_faceDatabase.py` stores the features and names of the face database, and will automatically generate facebank.pth and names.npy in the above directory structure;<br>
+3. Online camera recognition: `python camera_faceRec.py`<br>
+----
 1、准备数据集和模型:数据集为上述`test datasets`自己需要识别已知的人脸图像，模型为`./models/`文件夹下选择适合的;<br>
 2、准备人脸数据库：`python prepare_faceDatabase.py`进行人脸数据库特征和姓名存储，会自动生成上述目录结构中的facebank.pth和names.npy；<br>
 3、摄像头在线识别：`python camera_faceRec.py`<br>
@@ -113,7 +117,7 @@ yourTrainDataFolder/
 - Insightface[(github)](https://github.com/deepinsight/insightface )
 - InsightFace_Pytorch[github](https://github.com/TreB1eN/InsightFace_Pytorch )
 - [Ultra-Light-Fast-Generic-Face-Detector-1MB](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB )
-- 新版本依赖的[MTCNN_Pytorch](https://github.com/mayuanjason/MTCNN_face_detection_alignment_pytorch )
+- [MTCNN_Pytorch](https://github.com/mayuanjason/MTCNN_face_detection_alignment_pytorch )
 - [onnx转tensorRT-linux](https://github.com/RizhaoCai/PyTorch_ONNX_TensorRT )
 - [pytorch quantization](https://pytorch.org/blog/introduction-to-quantization-on-pytorch/ )
 - [onnxruntime quantization](https://github.com/microsoft/onnxruntime/tree/v1.0.0/onnxruntime/python/tools/quantization )
