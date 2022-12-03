@@ -65,7 +65,7 @@ cmake \
     -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
     .. 
 ```
-注意上面的`DCUDA_TOOLKIT_ROOT_DIR`、`DOPENCV_EXTRA_MODULES_PATH`改成适合自己的路径，`DWITH_GSTREAMER`为`ON`时支持CSI板载摄像头。如果想要把所有模块编译一个大的world库，则应当加上`DBUILD_opencv_world=ON`<br>
+注意上面的`DCUDA_TOOLKIT_ROOT_DIR`、`DOPENCV_EXTRA_MODULES_PATH`改成适合自己的路径，`DWITH_GSTREAMER`为`ON`时支持CSI板载摄像头。如果想要把所有模块编译一个大的world库，则应当加上`DBUILD_opencv_world=ON`;如果涉及到非ROOT权限安装，则指定`CMAKE_INSTALL_PREFIX`，比如`DCMAKE_INSTALL_PREFIX=/home/cuixing158/opencv4_4_0`<br>
 编译几分钟后，一定注意屏幕出现的信息，重点查看是否有报错，一般情况下会因为国内网络环境影响，都会出错，下载第三方库或者数据下不下来，这里根据我个人情况，给出第三方百度网盘[下载文件](https://pan.baidu.com/s/1NJLbbwxz1ouJigW9j5C-oA ),提取码：jmn7，放到指定文件路径下重新执行上面cmake指令即可，一直到无措为止。<br>
 如果`ippicv_2020_lnx_intel64_20191018_general.tgz` 这个文件在编译过程中失败，应当从报错的url链接中重新单独下载此文件，然后把此文件放置在opencv源码目录下的此路径，比如`opencv-x.x.0/.cache/ippicv/MD5-ippicv_2020_lnx_intel64_20191018_general.tgz`，注意这里面的`MD5`是属于你版本的一串数字号码，一般从`opencv-x.x.x/3rdparty/ippicv/ippicv.cmake`中可以找到。<br>
 
