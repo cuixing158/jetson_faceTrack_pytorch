@@ -66,7 +66,10 @@ cmake \
     .. 
 ```
 注意上面的`DCUDA_TOOLKIT_ROOT_DIR`、`DOPENCV_EXTRA_MODULES_PATH`改成适合自己的路径，`DWITH_GSTREAMER`为`ON`时支持CSI板载摄像头。<br>
-编译几分钟后，一定注意屏幕出现的信息，重点查看是否有报错，一般情况下会因为国内网络环境影响，都会出错，下载第三方库或者数据下不下来，这里根据我个人情况，给出第三方百度网盘[下载文件](https://pan.baidu.com/s/1NJLbbwxz1ouJigW9j5C-oA ),提取码：jmn7，放到指定文件路径下重新执行上面cmake指令即可，一直到无措为止。其中指定路径请参考截图<br>
+编译几分钟后，一定注意屏幕出现的信息，重点查看是否有报错，一般情况下会因为国内网络环境影响，都会出错，下载第三方库或者数据下不下来，这里根据我个人情况，给出第三方百度网盘[下载文件](https://pan.baidu.com/s/1NJLbbwxz1ouJigW9j5C-oA ),提取码：jmn7，放到指定文件路径下重新执行上面cmake指令即可，一直到无措为止。<br>
+如果ippicv_2020_lnx_intel64_20191018_general.tgz 这个文件在编译过程中失败，应当从报错的url链接中重新单独下载此文件，然后把此文件放置在opencv源码目录下的此路径，比如“opencv-x.x.0/.cache/ippicv/<MD5>-ippicv_2020_lnx_intel64_20191018_general.tgz”，注意这里面的<MD5>是属于你版本的一串数字号码，一般从opencv-x.x.x/3rdparty/ippicv/ippicv.cmake中可以找到。<br>
+
+其中指定路径请参考截图<br>
 ![face_landmark_model](images/face_landmark_model.jpg )<br>
 ![face_landmark_model_build](images/face_landmark_model_build.jpg)
 ![xfeatures2d_download](images/xfeatures2d_download.jpg )<br>
@@ -97,3 +100,4 @@ print(cv2.getbuildinformation())
 [How to configure your NVIDIA Jetson Nano for Computer Vision and Deep Learning](https://www.pyimagesearch.com/2020/03/25/how-to-configure-your-nvidia-jetson-nano-for-computer-vision-and-deep-learning/ )<br>
 [Jetson nano编译opencv](https://blog.csdn.net/weixin_42640549/article/details/104732567 )<br>
 [opencv_makefile:162_issue](https://github.com/opencv/opencv/issues/15398 )<br>
+[opencv build “FFMPEG: Download failed”](https://blog.csdn.net/pyt1234567890/article/details/106525475)
